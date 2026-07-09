@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calvert at Quarterfield Station | Apartments in Glen Burnie, MD</title>
+<meta name="description" content="Luxury apartments in Glen Burnie, MD. Two bedroom layouts with updated design and community amenities. Calvert at Quarterfield Station.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink:          #2B2A3A;
+    --ink-deep:     #1A1927;
+    --ink-mid:      #3D3C50;
+    --lavender:     #DDDCE9;
+    --lavender-mid: #C8C7DC;
+    --lavender-dark:#A8A7C4;
+    --lavender-pale:#F2F1F8;
+    --cream:        #F7F6F2;
+    --cream-mid:    #EDEAE3;
+    --warm-gray:    #8A8890;
+    --body:         #3A3845;
+    --white:        #FFFFFF;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink-deep); overflow-x: hidden; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 3rem; display: flex; align-items: center; justify-content: space-between; transition: background 0.3s ease, padding 0.3s ease; }
+  nav.scrolled { background: var(--ink-deep); padding: 0.9rem 3rem; box-shadow: 0 1px 0 rgba(255,255,255,0.05); }
+  .nav-logo img { height: 52px; display: block; }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.2s; font-weight: 500; }
+  .nav-links a:hover { color: var(--lavender); }
+  .nav-actions { display: flex; gap: 0.75rem; }
+  .btn-nav { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.55rem 1.25rem; cursor: pointer; font-family: 'DM Sans', sans-serif; font-weight: 500; border: none; transition: all 0.2s; text-decoration: none; display: inline-block; }
+  .btn-ghost { background: transparent; color: rgba(255,255,255,0.75); border: 1px solid rgba(255,255,255,0.25); }
+  .btn-ghost:hover { border-color: var(--lavender); color: var(--lavender); }
+  .btn-ink { background: var(--ink); color: var(--lavender); }
+  .btn-ink:hover { background: var(--ink-mid); }
+
+  /* PROMO */
+  .promo-bar { background: var(--ink); border-bottom: 1px solid rgba(221,220,233,0.15); padding: 0.65rem 3rem; padding-top: 4.75rem; display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+  .promo-text { font-size: 0.82rem; font-weight: 500; color: var(--lavender); letter-spacing: 0.04em; }
+  .promo-cta { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(221,220,233,0.6); border-bottom: 1px solid rgba(221,220,233,0.3); padding-bottom: 1px; text-decoration: none; white-space: nowrap; transition: color 0.2s; }
+  .promo-cta:hover { color: var(--lavender); }
+
+  /* HERO */
+  .hero { min-height: calc(100vh - 3rem); display: grid; grid-template-columns: 1fr 1fr; background: var(--ink-deep); position: relative; overflow: hidden; }
+  .hero-left { display: flex; flex-direction: column; justify-content: flex-end; padding: 5rem 3rem 6rem; position: relative; z-index: 2; }
+  .hero-eyebrow { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--lavender-dark); margin-bottom: 1.5rem; }
+  .hero-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 5.5vw, 4.8rem); font-weight: 300; line-height: 1.08; color: var(--white); margin-bottom: 1rem; }
+  .hero-headline em { font-style: italic; color: var(--lavender); }
+  .hero-headline .ul { position: relative; display: inline-block; }
+  .hero-headline .ul::after { content: ''; position: absolute; bottom: 3px; left: 0; right: 0; height: 2px; background: var(--lavender-dark); }
+  .hero-sub { font-size: 0.95rem; color: rgba(255,255,255,0.45); font-weight: 300; line-height: 1.8; margin-bottom: 2.5rem; max-width: 400px; }
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary { background: var(--ink); color: var(--lavender); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 1rem 2rem; border: 1px solid rgba(221,220,233,0.3); cursor: pointer; font-family: 'DM Sans', sans-serif; font-weight: 500; transition: background 0.2s, border-color 0.2s; text-decoration: none; display: inline-block; }
+  .btn-primary:hover { background: var(--ink-mid); border-color: var(--lavender); }
+  .btn-outline-lt { background: transparent; color: rgba(255,255,255,0.7); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 1rem 2rem; border: 1px solid rgba(255,255,255,0.18); cursor: pointer; font-family: 'DM Sans', sans-serif; transition: border-color 0.2s, color 0.2s; text-decoration: none; display: inline-block; }
+  .btn-outline-lt:hover { border-color: var(--lavender); color: var(--lavender); }
+  .hero-right { position: relative; overflow: hidden; }
+  .hero-right img { width: 100%; height: 100%; object-fit: cover; opacity: 0.65; display: block; }
+  .hero-right-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, var(--ink-deep) 0%, transparent 35%); pointer-events: none; }
+  .hero-stats { position: absolute; right: 3rem; bottom: 5rem; display: flex; flex-direction: column; gap: 1.75rem; z-index: 2; text-align: right; }
+  .hstat-val { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; color: var(--lavender); line-height: 1; }
+  .hstat-label { font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(221,220,233,0.4); margin-top: 0.2rem; }
+
+  /* STATS STRIP */
+  .stats { background: var(--ink); display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid rgba(221,220,233,0.08); }
+  .stat { padding: 1.75rem 2rem; border-right: 1px solid rgba(221,220,233,0.1); text-align: center; }
+  .stat:last-child { border-right: none; }
+  .stat-val { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; color: var(--lavender); line-height: 1; }
+  .stat-label { font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(221,220,233,0.45); margin-top: 0.35rem; }
+
+  /* SHARED */
+  section { padding: 6rem 3rem; }
+  .section-label { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--lavender-dark); margin-bottom: 0.75rem; }
+  .section-heading { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.15; color: var(--ink-deep); }
+  .section-body { font-size: 0.9rem; color: var(--body); line-height: 1.85; margin-top: 1.25rem; }
+  .lavender-rule { width: 2.5rem; height: 2px; background: var(--lavender-dark); margin: 1.5rem 0; }
+
+  /* ABOUT */
+  .about { background: var(--white); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+  .about-img-stack { position: relative; }
+  .about-img-main { width: 100%; aspect-ratio: 4/5; overflow: hidden; }
+  .about-img-main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .about-img-accent { position: absolute; bottom: -2rem; right: -2rem; width: 55%; aspect-ratio: 1; overflow: hidden; border: 4px solid var(--white); }
+  .about-img-accent img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .price-badge { position: absolute; top: 2rem; left: -1.5rem; background: var(--ink); padding: 1.25rem 1.5rem; text-align: center; }
+  .price-badge-val { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--lavender); line-height: 1; }
+  .price-badge-label { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(221,220,233,0.5); margin-top: 0.25rem; }
+
+  /* AMENITIES */
+  .amenities { background: var(--lavender-pale); }
+  .amenities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 3rem; }
+  .amenity-card { background: var(--white); padding: 2rem 1.75rem; border-bottom: 2px solid transparent; transition: border-color 0.2s; }
+  .amenity-card:hover { border-color: var(--lavender-dark); }
+  .amenity-icon { width: 2rem; height: 2rem; margin-bottom: 1rem; }
+  .amenity-icon svg { width: 100%; height: 100%; stroke: var(--ink-mid); fill: none; stroke-width: 1.5; }
+  .amenity-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 400; color: var(--ink-deep); margin-bottom: 0.6rem; }
+  .amenity-desc { font-size: 0.83rem; color: var(--body); line-height: 1.75; }
+
+  /* GALLERY */
+  .gallery { background: var(--ink-deep); padding: 6rem 3rem; }
+  .gallery-label { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--lavender-dark); margin-bottom: 0.75rem; }
+  .gallery-heading { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 300; color: var(--white); margin-bottom: 2.5rem; }
+  .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; gap: 0.75rem; }
+  .gallery-item { overflow: hidden; }
+  .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; filter: saturate(0.85); }
+  .gallery-item:hover img { transform: scale(1.04); filter: saturate(1); }
+  .gallery-item.wide { grid-column: span 2; }
+  .gallery-item.tall { grid-row: span 2; }
+
+  /* FLOOR PLANS */
+  .floorplans { background: var(--cream-mid); }
+  .plans-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+  .plan-card { background: var(--white); overflow: hidden; transition: box-shadow 0.2s; }
+  .plan-card:hover { box-shadow: 0 8px 32px rgba(43,42,58,0.1); }
+  .plan-card-top { background: var(--ink); padding: 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+  .plan-card-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; color: var(--lavender); }
+  .plan-tag { font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lavender-dark); border: 1px solid rgba(221,220,233,0.3); padding: 0.2rem 0.6rem; }
+  .plan-img { width: 100%; overflow: hidden; }
+  .plan-img img { width: 100%; display: block; }
+  .plan-body { padding: 1.5rem; }
+  .plan-price { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--ink-deep); }
+  .plan-meta { font-size: 0.78rem; color: var(--warm-gray); margin-top: 0.3rem; }
+  .plan-cta { display: block; width: 100%; text-align: center; background: var(--lavender-pale); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); padding: 0.85rem; border: none; cursor: pointer; font-family: 'DM Sans', sans-serif; margin-top: 1.25rem; transition: background 0.2s, color 0.2s; text-decoration: none; }
+  .plan-cta:hover { background: var(--ink); color: var(--lavender); }
+
+  /* PET */
+  .pet-section { background: var(--lavender-pale); border-top: 2px solid var(--lavender-mid); padding: 3rem; }
+  .pet-inner { max-width: 860px; margin: 0 auto; display: grid; grid-template-columns: auto 1fr; gap: 2.5rem; align-items: start; }
+  .pet-icon { width: 3.5rem; height: 3.5rem; background: var(--ink); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.25rem; }
+  .pet-icon svg { width: 22px; height: 22px; stroke: var(--lavender); fill: none; stroke-width: 1.5; }
+  .pet-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 400; color: var(--ink-deep); margin-bottom: 0.75rem; }
+  .pet-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+  .pet-lbl { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--warm-gray); margin-bottom: 0.25rem; }
+  .pet-val { font-size: 0.9rem; color: var(--ink-deep); font-weight: 500; }
+
+  /* CONTACT */
+  .contact { background: var(--ink-deep); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
+  .contact-form input, .contact-form textarea { width: 100%; background: rgba(255,255,255,0.05); border: none; border-bottom: 1px solid rgba(221,220,233,0.15); padding: 0.9rem 0.5rem; font-size: 0.9rem; font-family: 'DM Sans', sans-serif; color: var(--white); outline: none; transition: border-color 0.2s; margin-bottom: 1.25rem; display: block; }
+  .contact-form input:focus, .contact-form textarea:focus { border-bottom-color: var(--lavender); }
+  .contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(221,220,233,0.25); }
+  .contact-form textarea { resize: none; height: 100px; }
+  .ci-row { display: flex; gap: 1rem; align-items: flex-start; padding: 1.5rem 0; border-bottom: 1px solid rgba(221,220,233,0.07); }
+  .ci-row:first-child { padding-top: 0; }
+  .ci-row:last-child { border-bottom: none; }
+  .ci-dot { width: 6px; height: 6px; background: var(--lavender-dark); border-radius: 50%; margin-top: 0.45rem; flex-shrink: 0; }
+  .ci-label { font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--lavender-dark); margin-bottom: 0.3rem; }
+  .ci-val { font-size: 0.9rem; color: rgba(221,220,233,0.55); line-height: 1.6; }
+  .ci-val a { color: rgba(221,220,233,0.55); text-decoration: none; transition: color 0.2s; }
+  .ci-val a:hover { color: var(--lavender); }
+
+  /* FOOTER */
+  footer { background: #111019; padding: 2.5rem 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+  .footer-logo img { height: 40px; opacity: 0.65; display: block; }
+  .footer-links { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
+  .footer-links a { font-size: 0.67rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(221,220,233,0.25); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--lavender); }
+  .footer-copy { font-size: 0.67rem; color: rgba(221,220,233,0.18); }
+
+  /* RESPONSIVE */
+  @media (max-width: 960px) {
+    nav { padding: 1rem 1.5rem; }
+    nav.scrolled { padding: 0.8rem 1.5rem; }
+    .nav-links { display: none; }
+    .promo-bar { padding: 0.65rem 1.5rem; padding-top: 4.5rem; flex-direction: column; gap: 0.35rem; text-align: center; }
+    section { padding: 4rem 1.5rem; }
+    .gallery { padding: 4rem 1.5rem; }
+    .pet-section { padding: 2rem 1.5rem; }
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 7rem 1.5rem 4rem; }
+    .hero-right { min-height: 55vw; }
+    .hero-stats { right: 1.5rem; bottom: 2rem; }
+    .stats { grid-template-columns: 1fr 1fr; }
+    .stat:nth-child(2) { border-right: none; }
+    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .about-img-stack { margin-bottom: 3rem; }
+    .about-img-accent { bottom: -1rem; right: -0.5rem; }
+    .price-badge { left: 0; }
+    .amenities-grid { grid-template-columns: 1fr 1fr; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; }
+    .plans-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .pet-inner { grid-template-columns: 1fr; }
+    .pet-grid { grid-template-columns: 1fr 1fr; }
+    footer { flex-direction: column; align-items: flex-start; }
+  }
+  @media (max-width: 560px) {
+    .amenities-grid { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-item.wide, .gallery-item.tall { grid-column: span 1; grid-row: span 1; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="sitenav">
+  <a href="#home" class="nav-logo">
+    <img src="logo.jpg" alt="Calvert at Quarterfield Station">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#amenities">Amenities</a></li>
+    <li><a href="#floorplans">Floor Plans</a></li>
+    <li><a href="#gallery">Photos</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="https://passport.appf.io/sign_in?idp_type=tportal&vhostless=true&waldo=true" target="_blank" rel="noopener" class="btn-nav btn-ghost">Resident Portal</a>
+    <a href="https://greengate.appfolio.com/listings?filters%5Bproperty_list%5D=Calvert" target="_blank" rel="noopener" class="btn-nav btn-ink">Apply Now</a>
+  </div>
+</nav>
+
+<!-- PROMO BAR -->
+<div class="promo-bar" role="note">
+  <span class="promo-text">Second Month Free &mdash; Move in by 5/15 &nbsp;&middot;&nbsp; 22 Two Bedrooms with Washer/Dryer from $1,530/mo</span>
+  <a href="https://greengate.appfolio.com/listings?filters%5Bproperty_list%5D=Calvert" target="_blank" rel="noopener" class="promo-cta">Check Availability &rarr;</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Glen Burnie, Maryland</p>
+    <h1 class="hero-headline">
+      Live at<br>
+      <em>Quarterfield</em><br>
+      <span class="ul">Station</span>
+    </h1>
+    <p class="hero-sub">Meticulously renovated two-bedroom homes with washer/dryer in unit &mdash; starting at $1,530/mo in Glen Burnie, MD.</p>
+    <div class="hero-ctas">
+      <a href="#floorplans" class="btn-primary">View Floor Plans</a>
+      <a href="#contact" class="btn-outline-lt">Schedule a Tour</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="hero.jpg" alt="Calvert at Quarterfield Station">
+    <div class="hero-right-overlay" aria-hidden="true"></div>
+  </div>
+  <div class="hero-stats" aria-hidden="true">
+    <div><div class="hstat-val">22</div><div class="hstat-label">Homes Available</div></div>
+    <div><div class="hstat-val">850</div><div class="hstat-label">Sq Ft</div></div>
+    <div><div class="hstat-val">$1,530</div><div class="hstat-label">Starting From</div></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><div class="stat-val">2 BR</div><div class="stat-label">All Floor Plans</div></div>
+  <div class="stat"><div class="stat-val">850</div><div class="stat-label">Sq Ft</div></div>
+  <div class="stat"><div class="stat-val">$1,530</div><div class="stat-label">Starting From</div></div>
+  <div class="stat"><div class="stat-val">7 Days</div><div class="stat-label">On-Site Staff</div></div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-img-stack">
+      <div class="about-img-main">
+        <img src="about-main.jpg" alt="Calvert at Quarterfield Station community">
+      </div>
+      <div class="about-img-accent">
+        <img src="about-accent.jpg" alt="Calvert apartment interior">
+      </div>
+      <div class="price-badge">
+        <div class="price-badge-val">$1,530</div>
+        <div class="price-badge-label">Starting from</div>
+      </div>
+    </div>
+    <div>
+      <p class="section-label">Our Community</p>
+      <h2 class="section-heading">Where comfort meets convenience</h2>
+      <div class="lavender-rule"></div>
+      <p class="section-body">Tour our meticulously renovated two bedroom apartment homes and you'll find living spaces thoughtfully-designed with your everyday needs in mind. Enjoy eat-in kitchens with separate dining areas, French doors on the balcony level, and reserved parking for residents.</p>
+      <p class="section-body" style="margin-top: 1rem;">We also offer classic apartment homes featuring traditional finishes. Near local schools and major retailers, just minutes from I-97 and BWI &mdash; Calvert at Quarterfield Station is convenient no matter where you're headed.</p>
+      <p class="section-body" style="margin-top: 1rem; color: var(--ink-mid); font-weight: 500;">Second Month Free when you move in by 5/15.</p>
+      <a href="#amenities" class="btn-primary" style="margin-top: 2.5rem;">Explore Amenities</a>
+    </div>
+  </div>
+</section>
+
+<!-- AMENITIES -->
+<section class="amenities" id="amenities">
+  <p class="section-label">What's Included</p>
+  <h2 class="section-heading">Amenities &amp; Features</h2>
+  <div class="amenities-grid">
+    <div class="amenity-card">
+      <div class="amenity-icon"><svg viewBox="0 0 24 24"><path d="M3 17h18M5 17V9a1 1 0 011-1h12a1 1 0 011 1v8M9 21v-4h6v4"/></svg></div>
+      <h3 class="amenity-title">Picnic &amp; Grill Area</h3>
+      <p class="amenity-desc">Built-in charcoal grills and ample tables in a beautifully-landscaped courtyard &mdash; perfect for evenings with neighbors.</p>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+      <h3 class="amenity-title">Pet Friendly</h3>
+      <p class="amenity-desc">Dogs and cats welcome. Pet waste stations and free bags provided throughout the community. Dog park coming soon!</p>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+      <h3 class="amenity-title">Renovated Units</h3>
+      <p class="amenity-desc">Hardwood floors, kitchen backsplash, tile shower, European-style nickel hardware, and open floor plans designed for comfort.</p>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></div>
+      <h3 class="amenity-title">Playground</h3>
+      <p class="amenity-desc">Complete swing and slide set in kid-friendly mulch, situated right in the courtyard for easy supervision.</p>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+      <h3 class="amenity-title">On-Site Management</h3>
+      <p class="amenity-desc">Full-time staff available 7 days a week for all your needs. Stop by the office to say hello!</p>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+      <h3 class="amenity-title">Business Center</h3>
+      <p class="amenity-desc">Work from home but still get out of the house. A dedicated workspace right in the community.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <p class="gallery-label">Photo Gallery</p>
+  <h2 class="gallery-heading">See the Community</h2>
+  <div class="gallery-grid">
+    <div class="gallery-item wide tall">
+      <img src="gallary-1.png" alt="Community exterior">
+    </div>
+    <div class="gallery-item">
+      <img src="gallary-2.jpg" alt="Apartment interior">
+    </div>
+    <div class="gallery-item">
+      <img src="gallary-3.jpg" alt="Apartment living">
+    </div>
+    <div class="gallery-item">
+      <img src="gallary-4.jpg" alt="Community grounds">
+    </div>
+    <div class="gallery-item">
+      <img src="gallary-5.jpg" alt="Apartment bedroom">
+    </div>
+    <div class="gallery-item">
+      <img src="gallary-7.jpg" alt="Apartment living room">
+    </div>
+    <div class="gallery-item">
+      <img src="gallary-8.jpg" alt="Apartment kitchen">
+    </div>
+    <div class="gallery-item">
+      <img src="gallary-9.jpg" alt="Community exterior">
+    </div>
+  </div>
+</section>
+
+<!-- FLOOR PLANS -->
+<section class="floorplans" id="floorplans">
+  <p class="section-label">Available Now</p>
+  <h2 class="section-heading">Floor Plans</h2>
+  <p style="font-size: 0.85rem; color: var(--warm-gray); margin-top: 0.5rem;">All homes are 2 bedroom / 1 bathroom &mdash; 850 sq ft.</p>
+  <div class="plans-grid">
+    <div class="plan-card">
+      <div class="plan-card-top">
+        <div class="plan-card-name">2 Bed &nbsp;&middot;&nbsp; 1 Bath</div>
+        <div class="plan-tag">Classic</div>
+      </div>
+      <div class="plan-img">
+        <img src="floor-plan.jpg" alt="Classic 2BR floor plan">
+      </div>
+      <div class="plan-body">
+        <div class="plan-price">$1,530 <span style="font-size:0.8rem;color:var(--warm-gray);font-family:'DM Sans',sans-serif;font-weight:300;">/mo</span></div>
+        <div class="plan-meta">850 sq ft &nbsp;&middot;&nbsp; 2 bed &nbsp;&middot;&nbsp; 1 bath &nbsp;&middot;&nbsp; Traditional finishes</div>
+        <a href="https://greengate.appfolio.com/listings?filters%5Bproperty_list%5D=Calvert" target="_blank" rel="noopener" class="plan-cta">Check Availability &rarr;</a>
+      </div>
+    </div>
+    <div class="plan-card">
+      <div class="plan-card-top">
+        <div class="plan-card-name">2 Bed &nbsp;&middot;&nbsp; 1 Bath</div>
+        <div class="plan-tag">Renovated</div>
+      </div>
+      <div class="plan-img">
+        <img src="floor-plan.jpg" alt="Renovated 2BR floor plan">
+      </div>
+      <div class="plan-body">
+        <div class="plan-price">$1,630 <span style="font-size:0.8rem;color:var(--warm-gray);font-family:'DM Sans',sans-serif;font-weight:300;">/mo</span></div>
+        <div class="plan-meta">850 sq ft &nbsp;&middot;&nbsp; 2 bed &nbsp;&middot;&nbsp; 1 bath &nbsp;&middot;&nbsp; Modern finishes, W/D in unit</div>
+        <a href="https://greengate.appfolio.com/listings?filters%5Bproperty_list%5D=Calvert" target="_blank" rel="noopener" class="plan-cta">Check Availability &rarr;</a>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:3rem;">
+    <a href="https://greengate.appfolio.com/listings?filters%5Bproperty_list%5D=Calvert" target="_blank" rel="noopener" class="btn-primary">Apply Now</a>
+  </div>
+</section>
+
+<!-- PET POLICY -->
+<div class="pet-section">
+  <div class="pet-inner">
+    <div class="pet-icon">
+      <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+    </div>
+    <div>
+      <div class="pet-title">Pet-Friendly Community</div>
+      <div class="pet-grid">
+        <div><div class="pet-lbl">Pets Allowed</div><div class="pet-val">Cats &amp; Dogs</div></div>
+        <div><div class="pet-lbl">Max Pets</div><div class="pet-val">2 per home</div></div>
+        <div><div class="pet-lbl">Deposit</div><div class="pet-val">$300 &ndash; $600</div></div>
+        <div><div class="pet-lbl">Monthly Rent</div><div class="pet-val">$20 &ndash; $40</div></div>
+      </div>
+      <p style="font-size:0.72rem;color:var(--warm-gray);margin-top:0.85rem;">No weight maximum. Aggressive breeds not permitted. Contact us for details.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-grid">
+    <div>
+      <p class="section-label" style="color:var(--lavender-dark);">Get in Touch</p>
+      <h2 class="section-heading" style="color:var(--white);">Contact the Calvert Team</h2>
+      <div class="lavender-rule"></div>
+      <div style="margin-top:2rem;">
+        <div class="ci-row"><div class="ci-dot"></div><div><div class="ci-label">Address</div><div class="ci-val">442 Pamela Rd Suite B<br>Glen Burnie, MD 21061</div></div></div>
+        <div class="ci-row"><div class="ci-dot"></div><div><div class="ci-label">Phone</div><div class="ci-val"><a href="tel:+14102059827">(410) 205-9827</a></div></div></div>
+        <div class="ci-row"><div class="ci-dot"></div><div><div class="ci-label">Hours</div><div class="ci-val">7 days a week &mdash; on-site staff always available</div></div></div>
+        <div class="ci-row"><div class="ci-dot"></div><div><div class="ci-label">Directions</div><div class="ci-val"><a href="https://www.calvertstation.com/map" target="_blank" rel="noopener">Get Directions &rarr;</a></div></div></div>
+      </div>
+    </div>
+    <div>
+      <!-- ════════════════════════════════════════════
+           KNOCK WIDGET: replace this entire <form>
+           block with your Knock embed snippet
+      ════════════════════════════════════════════ -->
+      <form class="contact-form" id="contact-form" onsubmit="handleSubmit(event)">
+        <input type="text" name="first_name" placeholder="First Name" required>
+        <input type="text" name="last_name" placeholder="Last Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number">
+        <input type="text" name="subject" placeholder="Subject">
+        <textarea name="message" placeholder="Your message..."></textarea>
+        <button type="submit" class="btn-primary" style="width:100%;">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#home" class="footer-logo">
+    <img src="logo.jpg" alt="Calvert at Quarterfield Station">
+  </a>
+  <ul class="footer-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#amenities">Amenities</a></li>
+    <li><a href="#floorplans">Floor Plans</a></li>
+    <li><a href="#gallery">Photos</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="footer-copy">&copy; 2026 Greengate Management, LLC</div>
+</footer>
+
+<script>
+  const nav = document.getElementById('sitenav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type="submit"]');
+    const original = btn.textContent;
+    btn.textContent = 'Sent \u2713';
+    btn.style.opacity = '0.7';
+    setTimeout(() => { btn.textContent = original; btn.style.opacity = ''; e.target.reset(); }, 3000);
+  }
+</script>
+</body>
+</html>
